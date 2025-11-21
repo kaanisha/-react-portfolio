@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  font-family: 'Poppins', sans-serif;
+}
+.home {
+  height: 100vh;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; 
+  background: linear-gradient(120deg, #0d0d0d, #111111); 
+}
+.home-left {
+  max-width: 550px;
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.highlight {
+  color: rgba(232, 228, 31, 0.55); 
+}
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgb(165, 165, 228);
+  margin-top: 10px;
+}
+.description {
+  margin-top: 18px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #d2d2d2;
+}
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+.btn {
+  width: 135px;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background:linear-gradient(120deg, #0d00ff, #7977ec);
+  color: #ffffff;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  margin-top: 5%;
+}
+.btn:hover {
+  background: rgba(0, 102, 255, 0.8);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.4);
+}
+.home-right {
+  animation: fadeIn 1.3s ease-in-out;
+}
+.profile-wrapper {
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(239, 233, 233, 0.1);
+  transition: transform 0.4s ease;
+}
+.profile-wrapper:hover {
+  transform: scale(1.05);
+}
+.profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 100px; 
+    gap: 30px;
+    min-height: 80vh;
+    background: #0a0a0a; 
+  }
+  .profile-wrapper {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 25px;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .buttons {
+    justify-content: center;
+  }
+}
