@@ -7,8 +7,8 @@
   justify-content: space-between; 
   align-items: center;
   padding: 0 20px;
-  background-color: #2b1f3a;
-  color: whitesmoke;
+  background-color: white;
+  color: black;
   height: 100px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000; 
@@ -26,7 +26,7 @@
 }
 .nav-links li a {
   text-decoration: none;
-  color: whitesmoke;
+  color: black;
   font-size: 1.5rem;
   transition: color 0.3s;
 }
