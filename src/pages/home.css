@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background: black;
+background: linear-gradient(120deg, #111827, #1e293b);
   font-family: 'Poppins', sans-serif;
 }
 .home {
@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 50px; 
-  background: linear-gradient(120deg, #0d0d0d, #111111); 
+ background: linear-gradient(120deg, #111827, #1e293b);
 }
 .home-left {
   max-width: 550px;
@@ -28,7 +28,6 @@ body {
   font-weight: 700;
   color: #ffffff;
 }
-
 .highlight {
   color: rgba(232, 228, 31, 0.55); 
 }
@@ -56,8 +55,8 @@ body {
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.3s ease;
-  background:linear-gradient(120deg, #0d00ff, #7977ec);
-  color: #ffffff;
+  background:rgb(71, 71, 235);
+  color:white;
   border: 0.5px solid rgba(255, 255, 255, 0.2);
   margin-top: 5%;
 }
@@ -95,7 +94,6 @@ body {
     transform: translateY(0);
   }
 }
-
 @media (max-width: 900px) {
   .home {
     flex-direction: column-reverse;
@@ -123,4 +121,6 @@ body {
   .buttons {
     justify-content: center;
   }
+}
+ 
 }

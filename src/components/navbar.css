@@ -7,8 +7,8 @@
   z-index: 100;
   background: linear-gradient(
     90deg,
-    #06024e,   
-    #70ace8    
+    #0b8f02,   
+    #57f146    
   );
 
   display: flex;
@@ -36,5 +36,6 @@
   color: #ffffff;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
 }
+
 
 

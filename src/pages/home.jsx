@@ -29,7 +29,11 @@ function Home() {
           />
         </div>
       </div>
+      <div class="el">
+    </div>
     </section>
+
+    
   );
 }
 
