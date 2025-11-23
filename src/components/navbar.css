@@ -1,41 +1,39 @@
 .navbar {
   width: 100%;
-  padding: 18px 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  background: linear-gradient(
-    90deg,
-    #0b8f02,   
-    #57f146    
-  );
-
+  padding: 15px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #c1e5f5;
 }
 .nav-logo {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
-  color: white;
+  color: black;
+  letter-spacing: 1px;
+  background: transparent;  
 }
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 .nav-links li a {
   text-decoration: none;
-  color: white;
-  font-size: 20px; 
-  transition: 0.3s;
-
+  font-size: 18px;
+  color: black;
+  transition: 0.3s ease;
 }
 .nav-links li a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+  color: #70ace8;   /* Light blue hover */
+  text-shadow: 0 0 10px #70ace8;
+  transform: scale(1.05);
 }
+
 
 
 
