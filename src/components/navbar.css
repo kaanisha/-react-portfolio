@@ -29,7 +29,7 @@
   transition: 0.3s ease;
 }
 .nav-links li a:hover {
-  color: #70ace8;   /* Light blue hover */
+  color: #70ace8;  
   text-shadow: 0 0 10px #70ace8;
   transform: scale(1.05);
 }

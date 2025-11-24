@@ -1,0 +1,59 @@
+.skills {
+  padding: 100px 10%;
+  text-align: center;
+}
+.skills-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 40px;
+  color: #000;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.skill-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.25);
+}
+.skill-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+  color: #000;
+  text-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 3rem;
+  transition: 0.3s ease;
+}
+.icon:hover {
+  transform: scale(1.2);
+}
+.html { color: #E44D26; }
+.css { color: #1572B6; }
+.js { color: #F7DF1E; }
+.react { color: #61DBFB; }
+.java { color: #dd4b20; }
+.python { color: #4B8BBE; }
+.git { color: #F1502F; }
+.github { color: #000000; }
+.figma { color: #A259FF; }

@@ -28,8 +28,7 @@
   position: relative;
   z-index: 2;
   max-width: 850px;
-  text-align: center;
-  
+  text-align: center;  
   color: #000000;
 }
 
@@ -46,7 +45,8 @@
   color: black;
   margin-top: 10px;
   font-weight: 600;
-  
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  color: #000000;
 }
 @media (max-width: 600px) {
   .about {
