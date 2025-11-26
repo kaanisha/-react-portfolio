@@ -1,10 +1,13 @@
-import React from "react";
-import "./Skills.css";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJava, FaPython, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiDjango, SiFigma, SiGithub } from "react-icons/si";
+import React from 'react';
+import SkillsSection from '../components/SkillsSection';
+import '../components/FlowingMenu.css';
 
 function Skills() {
-  
+  return (
+    <div style={{ background: '#0b1020', color: '#fff', minHeight: '100vh' }}>
+      <SkillsSection />
+    </div>
+  );
 }
 
 export default Skills;

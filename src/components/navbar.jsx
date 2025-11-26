@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import './Navbar.css';
 
@@ -12,14 +12,14 @@ const Navbar = ({
     { label: 'Projects', href: '/projects' },
     { label: 'Contact', href: '/contact' }
   ],
-  activeHref = '/',
   className = '',
   ease = 'power3.easeOut',
-  baseColor = '#06024e',
-  pillColor = '#70ace8',
+  baseColor = '#000',      // black background
+  pillColor = '#70ace8',   // pill background
   hoveredPillTextColor = '#ffffff',
   pillTextColor = '#ffffff'
 }) => {
+  const location = useLocation(); // <-- gets current path
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const circleRefs = useRef([]);
   const tlRefs = useRef([]);
@@ -95,7 +95,7 @@ const Navbar = ({
               <li key={item.href}>
                 <Link
                   to={item.href}
-                  className={`pill${activeHref === item.href ? ' is-active' : ''}`}
+                  className={`pill${location.pathname === item.href ? ' is-active' : ''}`} // <-- dynamic active
                   onMouseEnter={() => handleEnter(i)}
                   onMouseLeave={() => handleLeave(i)}
                 >
@@ -135,5 +135,6 @@ const Navbar = ({
 };
 
 export default Navbar;
+
 
 
