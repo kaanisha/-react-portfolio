@@ -14,12 +14,12 @@ const Navbar = ({
   ],
   className = '',
   ease = 'power3.easeOut',
-  baseColor = '#000',      // black background
-  pillColor = '#70ace8',   // pill background
+  baseColor = '#000',      
+  pillColor = '#70ace8',   
   hoveredPillTextColor = '#ffffff',
   pillTextColor = '#ffffff'
 }) => {
-  const location = useLocation(); // <-- gets current path
+  const location = useLocation(); 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const circleRefs = useRef([]);
   const tlRefs = useRef([]);
@@ -85,10 +85,7 @@ const Navbar = ({
   return (
     <div className="pill-nav-container">
       <nav className={`pill-nav ${className}`} style={cssVars}>
-        {/* Logo on the left */}
         <div className="pill-logo-text">{logoText}</div>
-
-        {/* Desktop menu on the right */}
         <div className="pill-nav-items desktop-only" ref={navItemsRef}>
           <ul className="pill-list">
             {items.map((item, i) => (
@@ -108,15 +105,11 @@ const Navbar = ({
             ))}
           </ul>
         </div>
-
-        {/* Mobile menu button */}
         <button className="mobile-menu-button mobile-only" onClick={toggleMobileMenu}>
           <span className="hamburger-line" />
           <span className="hamburger-line" />
         </button>
       </nav>
-
-      {/* Mobile menu popover */}
       {isMobileMenuOpen && (
         <div className="mobile-menu-popover mobile-only" style={cssVars}>
           <ul className="mobile-menu-list">

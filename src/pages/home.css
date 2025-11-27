@@ -1,1 +1,44 @@
- 
+.hero {
+  max-width: 900px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  white-space: nowrap; 
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  margin-top: 15px;
+  opacity: 0.9;
+  color: #e6e6e6;
+}
+.home-buttons {
+  margin-top: 35px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 14px 34px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 12px;
+  color: #fff;
+  background: rgb(26, 29, 209);
+  border: 1.5px solid rgb(246, 242, 242);
+  backdrop-filter: blur(8px);
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(67, 234, 38, 0.689);
+  transform: translateY(-3px);
+}
+

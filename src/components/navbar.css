@@ -82,15 +82,11 @@
   height: 100%;
   transform: scale(0);
 }
-
-/* Label stack */
 .pill .label-stack {
   position: relative;
   z-index: 2;
   display: flex;
 }
-
-/* Active page indicator dot */
 .pill.is-active::after {
   content: '';
   position: absolute;
@@ -102,8 +98,6 @@
   background: #fff;
   border-radius: 50%;
 }
-
-/* Mobile menu */
 .mobile-only {
   display: none;
 }
