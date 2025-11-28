@@ -59,7 +59,7 @@ function MenuItem({ text, subItems = [] }) {
       .to(marqueeRef.current, { y: edge === 'top' ? '-101%' : '101%' }, 0)
       .to(marqueeInnerRef.current, { y: edge === 'top' ? '101%' : '-101%' }, 0);
   };
-  const repeatedMarqueeContent = Array.from({ length: 3 }).map((_, idx) => (
+  const repeatedMarqueeContent = Array.from({ length:7}).map((_, idx) => (
     <div className="marquee__inner-group" key={idx}>
       {subItems.map((skill, i) => (
         <span className="skill-pill" key={i}>{skill}</span>
