@@ -1,6 +1,6 @@
-/* Navbar container */
+
 .pill-nav-container {
-  position: fixed; /* fixed on top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -9,10 +9,8 @@
   justify-content: space-between;
   padding: 0 1rem;
   box-sizing: border-box;
-  background-color: #000; /* black background */
+  background-color: #000; 
 }
-
-/* Navbar main */
 .pill-nav {
   --nav-h: 42px;
   --pill-pad-x: 18px;
@@ -23,15 +21,11 @@
   width: 100%;
   box-sizing: border-box;
 }
-
-/* Logo text */
 .pill-logo-text {
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
 }
-
-/* Desktop menu items */
 .pill-nav-items {
   display: flex;
   align-items: center;
@@ -50,14 +44,14 @@
 
 .pill-list li a,
 .pill {
-  text-decoration: none; /* remove underline */
-  color: #fff; /* white text */
+  text-decoration: none; 
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 52px;
   padding: 0 var(--pill-pad-x);
-  background: #222; /* pill background */
+  background: #222; 
   border-radius: 9999px;
   font-weight: 600;
   text-transform: uppercase;
@@ -67,10 +61,8 @@
 }
 
 .pill:hover {
-  background: #555; /* hover effect */
+  background: #555; 
 }
-
-/* Hover circle animation */
 .pill .hover-circle {
   position: absolute;
   left: 50%;

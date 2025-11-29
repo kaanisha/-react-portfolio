@@ -4,6 +4,7 @@ import "./Home.css";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { Link } from "react-router-dom";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 gsap.registerPlugin(SplitText);
 
@@ -20,6 +21,7 @@ export default function Home() {
       ease: "power3.out",
       stagger: 0.04,
     });
+
     const split2 = new SplitText(subtitleRef.current, { type: "chars" });
     gsap.from(split2.chars, {
       duration: 1,
@@ -38,9 +40,9 @@ export default function Home() {
         height: "100vh",
         position: "relative",
         overflow: "hidden",
+        backgroundColor: "#000000", 
       }}
     >
-
       <Prism
         animationType="rotate"
         timeScale={0.5}
@@ -52,6 +54,7 @@ export default function Home() {
         noise={0.5}
         glow={1}
       />
+
       <div
         className="hero"
         style={{
@@ -64,30 +67,73 @@ export default function Home() {
           flexDirection: "column",
           alignItems: "center",
           zIndex: 20,
+          color: "#FFFFFF", 
         }}
       >
         <h1 className="hero-title" ref={titleRef}>
           Hi there, I'm Kaanisha
         </h1>
-
         <p className="hero-subtitle" ref={subtitleRef}>
           Frontend Developer
         </p>
-
-        <div className="home-buttons">
+        <div
+          className="home-buttons"
+          style={{
+            marginTop: "20px",
+            display: "flex",
+            gap: "15px",
+          }}
+        >
           <Link to="/about" className="btn">
             About Me
           </Link>
-         <a
-                className="btn"
-                href="/Kaanisha-Resume.docx.pdf"
-                download="Kaanisha-Resume.docx.pdf"
-   >
-              Download CV
-        </a>
+          <a
+            className="btn"
+            href="/Kaanisha-Resume.docx.pdf"
+            download="Kaanisha-Resume.docx.pdf"
+          >
+            Download CV
+          </a>
+        </div>
+        <div
+          style={{
+            marginTop: "30px",
+            display: "flex",
+            gap: "25px",
+            fontSize: "1.8rem",
+          }}
+        >
+          <a
+            href="https://github.com/kaanisha"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#e7dedeff", transition: "transform 0.3s" }}
+            className="social-icon"
+          >
+            <FaGithub />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/kaanisha-s"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#0A66C2", transition: "transform 0.3s" }}
+            className="social-icon"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="mailto:kaanisha03@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#c5832cf3", transition: "transform 0.3s" }}
+            className="social-icon"
+          >
+            <FaEnvelope />
+          </a>
         </div>
       </div>
     </div>
   );
 }
-

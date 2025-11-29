@@ -1,12 +1,43 @@
 import React from "react";
+import Prism from "../components/Aurora"; 
+import "./About.css"; 
+import profileImg from "../assets/profile.jpg"; 
 
-function About() {
-  return <div></div>;
+export default function AboutPage() {
+  return (
+    <div
+      style={{
+        width: "100%",
+        height: "100vh",
+        position: "relative",
+        overflow: "hidden",
+        backgroundColor: "#000000", 
+      }}
+    >
+      <Prism
+        animationType="rotate"
+        timeScale={0.5}
+        height={3.5}
+        baseWidth={5.5}
+        scale={3.6}
+        hueShift={0}
+        colorFrequency={1}
+        noise={0.5}
+        glow={1}
+      />
+      <div className="about-container">
+        <h1 className="about-title">About Me</h1>
+        <div className="about-content">
+          <div className="about-text">
+            <p>
+             I’m Kaanisha, a creative and detail-focused individual who enjoys turning ideas into simple, modern, and visually meaningful experiences. I love crafting clean layouts, thoughtful interactions, and designs that feel smooth and enjoyable to use. I’m always exploring new ways to grow, improve my style, and bring more clarity and purpose into the work I create.
+            </p>
+          </div>
+          <div className="about-profile">
+            <img src={profileImg} alt="Kaanisha" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-export default About;
-
-
-
-
-
