@@ -10,7 +10,6 @@ export default function AboutPage() {
   const imgRef = useRef(null);
 
   useEffect(() => {
-    // Title animation
     gsap.fromTo(
       titleRef.current,
       { opacity: 0, y: -20 },
@@ -21,8 +20,6 @@ export default function AboutPage() {
         ease: "power3.out",
       }
     );
-
-    // Text animation
     gsap.to(textRef.current, {
       opacity: 1,
       x: 0,
@@ -30,8 +27,6 @@ export default function AboutPage() {
       delay: 0.3,
       ease: "power3.out",
     });
-
-    // Image animation (fixed - now works)
     gsap.to(imgRef.current.querySelector("img"), {
       opacity: 1,
       x: 0,

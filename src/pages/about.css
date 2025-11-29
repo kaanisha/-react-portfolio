@@ -11,16 +11,13 @@
   align-items: center;
   color: #ffffff;
 }
-
-/* Title */
 .about-title {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 40px;
   font-weight: bold;
-  opacity: 0; /* animation start */
+  opacity: 0; 
 }
-
 .about-content {
   display: flex;
   align-items: flex-start;
@@ -28,18 +25,14 @@
   width: 100%;
   gap: 50px;
 }
-
-/* TEXT */
 .about-text {
   flex: 1;
   font-family: "Times New Roman";
   font-size: 1.5rem;
   line-height: 1.6;
-  opacity: 0; /* starting hidden */
-  transform: translateX(-50px); /* slide from left */
+  opacity: 0; 
+  transform: translateX(-50px); 
 }
-
-/* IMAGE */
 .about-profile {
   flex: 1;
   display: flex;
@@ -54,11 +47,9 @@
   object-fit: cover;
   border: 3px solid #ffffff;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  opacity: 0; /* starting hidden */
-  transform: translateX(40px); /* slide from right */
+  opacity: 0; 
+  transform: translateX(40px); 
 }
-
-/* Mobile */
 @media (max-width: 768px) {
   .about-container {
     top: 10%;
