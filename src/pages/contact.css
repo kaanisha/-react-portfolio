@@ -1,0 +1,23 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f1f2e, #111122);
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: flex-start; /* push to top */
+  padding-top: 50px; /* adjust distance from top */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(145deg, #1f1f2e, #252538);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  max-width: 500px;
+  width: 90%;
+}
