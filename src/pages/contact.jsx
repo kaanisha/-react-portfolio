@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import Prism from "../components/Aurora";   
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 
@@ -11,43 +12,59 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        "service_krsbrxd",   // Your service ID
-        "template_aivz8i2",  // Your template ID
-        form.current,        // Form reference
-        "oVFyYicRFr_OJTBFK"  // Your public key
+        "service_krsbrxd",   
+        "template_aivz8i2",  
+        form.current,
+        "oVFyYicRFr_OJTBFK"  
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           setStatus("Message sent successfully!");
           form.current.reset();
         },
-        (error) => {
-          console.log(error.text);
+        () => {
           setStatus("Failed to send message, please try again.");
         }
       );
   };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "auto" }}>
-      <h2>Contact Us</h2>
-      <form ref={form} onSubmit={sendEmail}>
-        <div>
-          <label>Name</label>
-          <input type="text" name="user_name" required />
-        </div>
-        <div>
-          <label>Email</label>
-          <input type="email" name="user_email" required />
-        </div>
-        <div>
-          <label>Message</label>
-          <textarea name="message" required />
-        </div>
-        <button type="submit">Send</button>
-      </form>
-      {status && <p>{status}</p>}
+    <div className="contact-container">
+      <Prism
+        animationType="rotate"
+        timeScale={0.5}
+        height={3.5}
+        baseWidth={5.5}
+        scale={3.6}
+        hueShift={0}
+        colorFrequency={1}
+        noise={0.5}
+        glow={1}
+      />
+      <div className="contact-box">
+        <h2>Contact Us</h2>
+
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="input-field">
+            <label>Name</label>
+            <input type="text" name="user_name" required />
+          </div>
+
+          <div className="input-field">
+            <label>Email</label>
+            <input type="email" name="user_email" required />
+          </div>
+
+          <div className="input-field">
+            <label>Message</label>
+            <textarea name="message" required />
+          </div>
+
+          <button type="submit" className="send-btn">Send</button>
+        </form>
+
+        {status && <p className="status">{status}</p>}
+      </div>
     </div>
   );
 }
