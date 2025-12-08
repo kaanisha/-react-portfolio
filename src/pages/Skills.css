@@ -3,7 +3,10 @@
   min-height: 100vh;
   position: relative;
   background: #000;
-  overflow: hidden;
+
+  /* Prevent horizontal scroll everywhere */
+  overflow-x: hidden;
+  overflow-y: hidden; /* desktop - NO scroll */
 }
 
 .prism-background {
@@ -13,6 +16,7 @@
   height: 100%;
   z-index: 1;
 }
+
 .skills-container {
   position: relative;
   z-index: 10;
@@ -20,14 +24,15 @@
   text-align: center;
   top: -2rem;
 }
+
 .skills-title {
-  font-size: 2.5rem;
+  font-size: 56px;
   margin-bottom: 40px;
   color: white;
 }
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
+  grid-template-columns: repeat(5, 1fr);
   gap: 25px;
 }
 @media (max-width: 1200px) {
@@ -63,18 +68,21 @@
   transition: transform 0.1s ease, background 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
+
 .skill-name {
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
   transition: 0.3s ease;
 }
+
 .skill-icon {
   position: absolute;
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
   font-size: 5rem;
 }
+
 .skill-box:hover .skill-name {
   opacity: 0;
 }
@@ -83,7 +91,54 @@
   opacity: 1;
   transform: scale(1.15);
 }
+
 .skill-box:active {
-  transform: scale(0.95); 
-  transition: transform 0.1s ease;
+  transform: scale(0.95);
+}
+@media (max-width: 768px) {
+  .skills-page {
+    overflow-y: auto;   
+    padding: 40px 10px;
+    min-height: 100vh;
+  }
+
+  .skills-container {
+    padding: 40px 5%;
+    top: 0;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .skill-box {
+    height: 120px;
+  }
+
+  .skill-name {
+    font-size: 1.2rem;
+  }
+
+  .skill-icon {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-title {
+    font-size: 1.8rem;
+  }
+
+  .skill-box {
+    height: 100px;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+
+  .skill-icon {
+    font-size: 3rem;
+  }
 }

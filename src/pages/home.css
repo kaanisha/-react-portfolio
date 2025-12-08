@@ -1,13 +1,15 @@
+
 .hero {
   max-width: 900px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .hero-title {
   font-size: 4.5rem;
   font-weight: 900;
   letter-spacing: 1px;
-  white-space: nowrap; 
+  white-space: nowrap;
   color: #ffffff;
 }
 
@@ -17,11 +19,13 @@
   opacity: 0.9;
   color: #e6e6e6;
 }
+
 .home-buttons {
   margin-top: 35px;
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -42,3 +46,38 @@
   transform: translateY(-3px);
 }
 
+@media (max-width: 768px) {
+  body, html {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .hero {
+    max-width: 95%;
+    padding: 20px 10px;
+    overflow-y: auto;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    white-space: normal; 
+    line-height: 2.9rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
